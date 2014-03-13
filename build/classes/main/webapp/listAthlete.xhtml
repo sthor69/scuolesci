@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>List of the books</title>
+</h:head>
+<h:body>
+	<h1>List of the books</h1>
+	<hr />
+	<h:dataTable value="#{athleteController.athleteList}" var="bk">
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Id" />
+			</f:facet>
+			<h:outputText value="#{bk.id}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Name" />
+			</f:facet>
+			<h:outputText value="#{bk.name}" />
+		</h:column><h:column>
+			<f:facet name="header">
+				<h:outputText value="Surname" />
+			</f:facet>
+			<h:outputText value="#{bk.surname}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Birth" />
+			</f:facet>
+			<h:outputText value="#{bk.birth}" />
+		</h:column>
+	</h:dataTable>
+	<h:form>
+		<h:commandLink action="#{athleteController.doNew}">Create a new athlete
+</h:commandLink>
+	</h:form>
+	<hr />
+	<i>APress - Beginning Java EE 6</i>
+</h:body>
+</html>
