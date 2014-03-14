@@ -9,11 +9,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+@LocalBean
 @Stateless
 public class AthleteEJB {
 	
 	@PersistenceContext(unitName="scuoleSciPU")
-	private EntityManager em;
+	private EntityManager em; 
 	
 	public List<Athlete> findAthlete() {
 		Query query = em.createNamedQuery("findAllAthletes");
