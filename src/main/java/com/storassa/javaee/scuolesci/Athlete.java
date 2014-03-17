@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 
+
 @Entity
 @NamedQuery(name = "findAllAthletes", query = "SELECT b FROM Athlete b")
 public class Athlete {

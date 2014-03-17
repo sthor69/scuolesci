@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
-	version="1.0">
+	version="2.1">
 	<persistence-unit name="scuoleSciPU" transaction-type="JTA">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-		<class>com.storassa.javaee.scuolesci.Athlete</class>
+		<class>main.java.com.storassa.javaee.scuolesci.Athlete</class>
 		<properties>
 			<property name="eclipselink.target-database" value="DERBY" />
 			<property name="eclipselink.jdbc.driver" 
